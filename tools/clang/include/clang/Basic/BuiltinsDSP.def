@@ -1,0 +1,166 @@
+//===--- BuiltinsDSP.def - DSP Builtin function database --------*- C++ -*-===//
+//
+//                     The LLVM Compiler Infrastructure
+//
+//===----------------------------------------------------------------------===//
+//
+// This file defines the DSP-specific builtin function database.  Users of
+// this file must define the BUILTIN macro to make use of this information.
+//
+//===----------------------------------------------------------------------===//
+
+// The format of this database matches clang/Basic/Builtins.def.
+//ppp-start
+BUILTIN(__builtin_dsp_vnot, "V64cV64c", "")
+BUILTIN(__builtin_dsp_vand, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_vor, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_vxor, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_not,"ii", "")
+BUILTIN(__builtin_dsp_vmovcv2v, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_vsel, "V64ciV32sV32s", "")
+//ppp-end
+BUILTIN(__builtin_dsp_vmax_10, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_vmax_20, "V32sV32sV32s", "")
+BUILTIN(__builtin_dsp_vmax_40, "V16iV16iV16i", "")
+
+BUILTIN(__builtin_dsp_vmin_10, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_vmin_20, "V32sV32sV32s", "")
+BUILTIN(__builtin_dsp_vmin_40, "V16iV16iV16i", "")
+
+BUILTIN(__builtin_dsp_vsum_10, "V64cV64c", "")
+BUILTIN(__builtin_dsp_vsum_20, "V32sV32s", "")
+BUILTIN(__builtin_dsp_vsum_40, "V16iV16i", "")
+BUILTIN(__builtin_dsp_max,"iii", "")
+BUILTIN(__builtin_dsp_min,"iii", "")
+
+BUILTIN(__builtin_dsp_abs_qb, "ii", "")
+BUILTIN(__builtin_dsp_test_qb, "iii", "") 
+BUILTIN(__builtin_dsp_testi_qb, "iii", "")
+BUILTIN(__builtin_dsp_cbw_qb, "ii", "")
+BUILTIN(__builtin_dsp_chw_qb, "ii", "")
+BUILTIN(__builtin_dsp_bfext_qb, "iiii", "")
+BUILTIN(__builtin_dsp_bfextu_qb, "iiii", "")
+BUILTIN(__builtin_dsp_bfst_qb, "iiiii", "")
+BUILTIN(__builtin_dsp_bst_qb, "ii", "")
+BUILTIN(__builtin_dsp_bclr_qb, "ii", "")
+
+BUILTIN(__builtin_dsp_veq_10, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_veq_20, "V32sV32sV32s", "")
+BUILTIN(__builtin_dsp_veq_40, "V16iV16iV16i", "")
+
+BUILTIN(__builtin_dsp_vgt_10, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_vgt_20, "V32sV32sV32s", "")
+BUILTIN(__builtin_dsp_vgt_40, "V16iV16iV16i", "")
+
+BUILTIN(__builtin_dsp_vlt_10, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_vlt_20, "V32sV32sV32s", "")
+BUILTIN(__builtin_dsp_vlt_40, "V16iV16iV16i", "")
+
+BUILTIN(__builtin_dsp_vge_10, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_vge_20, "V32sV32sV32s", "")
+BUILTIN(__builtin_dsp_vge_40, "V16iV16iV16i", "")
+
+BUILTIN(__builtin_dsp_vle_10, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_vle_20, "V32sV32sV32s", "")
+BUILTIN(__builtin_dsp_vle_40, "V16iV16iV16i", "")
+
+BUILTIN(__builtin_dsp_vadd_10, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_vadd_20, "V32sV32sV32s", "")
+BUILTIN(__builtin_dsp_vadd_40, "V16iV16iV16i", "")
+
+BUILTIN(__builtin_dsp_vsub_10, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_vsub_20, "V32sV32sV32s", "")
+BUILTIN(__builtin_dsp_vsub_40, "V16iV16iV16i", "")
+
+BUILTIN(__builtin_dsp_vsl_10, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_vsl_20, "V32sV32sV32s", "")
+BUILTIN(__builtin_dsp_vsl_40, "V16iV16iV16i", "")
+
+BUILTIN(__builtin_dsp_vsls_10, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_vsls_20, "V32sV32sV32s", "")
+BUILTIN(__builtin_dsp_vsls_40, "V16iV16iV16i", "")
+
+BUILTIN(__builtin_dsp_vsra_10, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_vsra_20, "V32sV32sV32s", "")
+BUILTIN(__builtin_dsp_vsra_40, "V16iV16iV16i", "")
+
+BUILTIN(__builtin_dsp_vsrl_10, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_vsrl_20, "V32sV32sV32s", "")
+BUILTIN(__builtin_dsp_vsrl_40, "V16iV16iV16i", "")
+
+BUILTIN(__builtin_dsp_vabs_10, "V64cV64c", "")
+BUILTIN(__builtin_dsp_vabs_20, "V32sV32s", "")
+BUILTIN(__builtin_dsp_vabs_40, "V16iV16i", "")
+
+BUILTIN(__builtin_dsp_vfmul_10, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_vfmul_20, "V32sV32sV32s", "")
+BUILTIN(__builtin_dsp_vfmul_40, "V16iV16iV16i", "")
+
+BUILTIN(__builtin_dsp_vfmac_10, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_vfmac_20, "V32sV32sV32s", "")
+BUILTIN(__builtin_dsp_vfmac_40, "V16iV16iV16iV16i", "")
+
+BUILTIN(__builtin_dsp_vcmac_10, "V64cV64cV64c", "")
+BUILTIN(__builtin_dsp_vcmac_20, "V32sV32sV32s", "")
+
+BUILTIN(__builtin_dsp_vcmul_20, "V32sV32sV32s", "")
+BUILTIN(__builtin_dsp_vcmulr_40, "V16iV16iV16i", "")
+BUILTIN(__builtin_dsp_vcmuli_40, "V16iV16iV16i", "")
+
+BUILTIN(__builtin_dsp_vloadr_8, "V64cii", "")
+BUILTIN(__builtin_dsp_vloadr_16, "V32sii", "")
+BUILTIN(__builtin_dsp_vloadr_32, "V16iii", "")
+
+BUILTIN(__builtin_dsp_loadu_8,  "iii", "")
+BUILTIN(__builtin_dsp_loadu_16, "iii", "")
+BUILTIN(__builtin_dsp_loadu_32, "iii", "")
+
+BUILTIN(__builtin_dsp_vloadu_8, "V64cii", "")
+BUILTIN(__builtin_dsp_vloadu_16, "V32sii", "")
+BUILTIN(__builtin_dsp_vloadu_32, "V16iii", "")
+
+BUILTIN(__builtin_dsp_vloadur_8, "V64cii", "")
+BUILTIN(__builtin_dsp_vloadur_16, "V32sii", "")
+BUILTIN(__builtin_dsp_vloadur_32, "V16iii", "")
+
+BUILTIN(__builtin_dsp_storeu_8,  "viii", "")
+BUILTIN(__builtin_dsp_storeu_16, "viii", "")
+BUILTIN(__builtin_dsp_storeu_32, "viii", "")
+
+BUILTIN(__builtin_dsp_storeu_10, "V64cii", "")
+BUILTIN(__builtin_dsp_storeu_20, "V32sii", "")
+BUILTIN(__builtin_dsp_storeu_40, "V16iii", "")
+
+BUILTIN(__builtin_dsp_vstoreu_10, "V64cii", "")
+BUILTIN(__builtin_dsp_vstoreu_20, "V32sii", "")
+BUILTIN(__builtin_dsp_vstoreu_40, "V16iii", "")
+
+BUILTIN(__builtin_dsp_loadvh, "V16iii", "")
+BUILTIN(__builtin_dsp_loadvl, "V16iii", "")
+
+BUILTIN(__builtin_dsp_storevh, "V16iii", "")
+BUILTIN(__builtin_dsp_storevl, "V16iii", "")
+
+BUILTIN(__builtin_dsp_loaduvh, "V16iii", "")
+BUILTIN(__builtin_dsp_loaduvl, "V16iii", "")
+
+BUILTIN(__builtin_dsp_storeuvh, "V16iii", "")
+BUILTIN(__builtin_dsp_storeuvl, "V16iii", "")
+
+BUILTIN(__builtin_dsp_loado_16, "iii", "")
+BUILTIN(__builtin_dsp_loado_32, "iii", "")
+
+BUILTIN(__builtin_dsp_vloado_8, "V64cii", "")
+BUILTIN(__builtin_dsp_vloado_16, "V32sii", "")
+BUILTIN(__builtin_dsp_vloado_32, "V16iii", "")
+
+BUILTIN(__builtin_dsp_storeo_16, "iii", "")
+BUILTIN(__builtin_dsp_storeo_32, "iii", "")
+
+BUILTIN(__builtin_dsp_vstoreo_10, "V64cii", "")
+BUILTIN(__builtin_dsp_vstoreo_20, "V32sii", "")
+BUILTIN(__builtin_dsp_vstoreo_40, "V16iii", "")
+
+
+
+#undef BUILTIN
